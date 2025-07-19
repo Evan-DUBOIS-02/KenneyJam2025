@@ -481,7 +481,7 @@ MonoBehaviour:
   _worldType: 1
   _mask: {fileID: 1655379587}
   _interactUI: {fileID: 1160769969}
-  _nameScene: 
+  _nameScene: MS_Futurist_Win
 --- !u!135 &31282336
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6834,7 +6834,7 @@ MonoBehaviour:
   _worldType: 0
   _mask: {fileID: 344722736}
   _interactUI: {fileID: 969922283}
-  _nameScene: 
+  _nameScene: MS_Medieval_Win
 --- !u!135 &662698996
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7968,7 +7968,7 @@ MonoBehaviour:
   _worldType: 0
   _mask: {fileID: 1439372276}
   _interactUI: {fileID: 786261128}
-  _nameScene: 
+  _nameScene: MS_Medieval_Win
 --- !u!135 &769734267
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13568,7 +13568,7 @@ MonoBehaviour:
   _worldType: 1
   _mask: {fileID: 1439372276}
   _interactUI: {fileID: 1660671127}
-  _nameScene: 
+  _nameScene: MS_Futurist_Win
 --- !u!135 &1284814572
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14112,7 +14112,7 @@ MonoBehaviour:
   _worldType: 0
   _mask: {fileID: 1655379587}
   _interactUI: {fileID: 229551198}
-  _nameScene: 
+  _nameScene: MS_Medieval_Win
 --- !u!135 &1328864477
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15389,7 +15389,7 @@ MonoBehaviour:
   _worldType: 1
   _mask: {fileID: 1152720833}
   _interactUI: {fileID: 1391054420}
-  _nameScene: 
+  _nameScene: MS_Futurist_Win
 --- !u!135 &1447068662
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16932,7 +16932,7 @@ MonoBehaviour:
   _worldType: 1
   _mask: {fileID: 1771390997}
   _interactUI: {fileID: 764774918}
-  _nameScene: 
+  _nameScene: MS_Futurist_Win
 --- !u!135 &1547612635
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18802,7 +18802,7 @@ MonoBehaviour:
   _worldType: 1
   _mask: {fileID: 344722736}
   _interactUI: {fileID: 1010274308}
-  _nameScene: 
+  _nameScene: MS_Futurist_Win
 --- !u!135 &1669497026
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22668,7 +22668,7 @@ MonoBehaviour:
   _worldType: 0
   _mask: {fileID: 1771390997}
   _interactUI: {fileID: 742481546}
-  _nameScene: 
+  _nameScene: MS_Medieval_Win
 --- !u!135 &2022921366
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23720,7 +23720,7 @@ MonoBehaviour:
   _worldType: 0
   _mask: {fileID: 1152720833}
   _interactUI: {fileID: 1624121782}
-  _nameScene: 
+  _nameScene: MS_Medieval_Win
 --- !u!135 &2118294307
 SphereCollider:
   m_ObjectHideFlags: 0
