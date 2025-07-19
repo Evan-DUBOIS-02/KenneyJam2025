@@ -37,6 +37,11 @@ public class PlayerMouvement : MonoBehaviour
         transform.GetChild(0).LookAt(transform.position + direction, Vector3.up);
         _animator.SetFloat("Speed", direction.magnitude);
     }
+
+    public void PlayPushAnimation()
+    {
+        _animator.SetTrigger("Bump");
+    }
 }
 
    

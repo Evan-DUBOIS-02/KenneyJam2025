@@ -12,8 +12,6 @@ public class Push : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        
         if (other.CompareTag("Player"))
         {
 
@@ -36,8 +34,8 @@ public class Push : MonoBehaviour
 
 
             StartCoroutine(MoveSmoothly(other.transform, startPosition, targetPosition, pushDuration));
-        
 
+            other.GetComponent<PlayerMouvement>().PlayPushAnimation();
         }
 
 
