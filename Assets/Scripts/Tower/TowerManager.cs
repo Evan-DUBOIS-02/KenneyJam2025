@@ -33,6 +33,7 @@ public class TowerManager: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("cc");
         if (other.CompareTag("Player"))
         {
             DisplayInteract(true);
