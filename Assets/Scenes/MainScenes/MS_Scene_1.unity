@@ -937,6 +937,7 @@ GameObject:
   - component: {fileID: 68154021}
   - component: {fileID: 68154020}
   - component: {fileID: 68154019}
+  - component: {fileID: 68154023}
   m_Layer: 0
   m_Name: BorderTop2_5
   m_TagString: Untagged
@@ -959,7 +960,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1033,6 +1034,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 714273574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &68154023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68154018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 1
 --- !u!1001 &79249980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1455,6 +1471,7 @@ GameObject:
   - component: {fileID: 113029691}
   - component: {fileID: 113029690}
   - component: {fileID: 113029689}
+  - component: {fileID: 113029693}
   m_Layer: 0
   m_Name: BorderTop4_5
   m_TagString: Untagged
@@ -1477,7 +1494,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1551,6 +1568,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 714273574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113029693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113029688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 1
 --- !u!1001 &114744819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4222,6 +4254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419477903}
   - component: {fileID: 419477904}
+  - component: {fileID: 419477905}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4257,6 +4290,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PERCENT_RATIO: 0.05
+--- !u!82 &419477905
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419477902}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 226458592241421044, guid: 0bf2ee6f2064fea48963f24a6d3e6923, type: 2}
+  m_audioClip: {fileID: 8300000, guid: ea3d3e009e992d340b0eda9b1f690fe2, type: 3}
+  m_Resource: {fileID: 8300000, guid: ea3d3e009e992d340b0eda9b1f690fe2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &445067073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6282,6 +6412,7 @@ GameObject:
   - component: {fileID: 618455128}
   - component: {fileID: 618455127}
   - component: {fileID: 618455126}
+  - component: {fileID: 618455129}
   m_Layer: 0
   m_Name: BorderBot1_5
   m_TagString: Untagged
@@ -6319,7 +6450,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6378,6 +6509,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618455124}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &618455129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618455124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 0
 --- !u!1001 &631042565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8868,6 +9014,7 @@ GameObject:
   - component: {fileID: 907922675}
   - component: {fileID: 907922674}
   - component: {fileID: 907922673}
+  - component: {fileID: 907922677}
   m_Layer: 0
   m_Name: BorderTop1_5
   m_TagString: Untagged
@@ -8890,7 +9037,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -8964,6 +9111,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 714273574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &907922677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907922672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 1
 --- !u!1001 &912217095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10113,6 +10275,7 @@ GameObject:
   - component: {fileID: 1034656029}
   - component: {fileID: 1034656028}
   - component: {fileID: 1034656027}
+  - component: {fileID: 1034656031}
   m_Layer: 0
   m_Name: BorderTop5_5
   m_TagString: Untagged
@@ -10135,7 +10298,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10209,6 +10372,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 714273574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1034656031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034656026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 1
 --- !u!1001 &1041728587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10599,6 +10777,7 @@ GameObject:
   - component: {fileID: 1096605770}
   - component: {fileID: 1096605769}
   - component: {fileID: 1096605768}
+  - component: {fileID: 1096605771}
   m_Layer: 0
   m_Name: BorderBot4_5
   m_TagString: Untagged
@@ -10636,7 +10815,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10695,6 +10874,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096605766}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1096605771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096605766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 0
 --- !u!1001 &1118374008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10879,6 +11073,7 @@ GameObject:
   - component: {fileID: 1135178940}
   - component: {fileID: 1135178939}
   - component: {fileID: 1135178938}
+  - component: {fileID: 1135178941}
   m_Layer: 0
   m_Name: BorderTop3_5
   m_TagString: Untagged
@@ -10916,7 +11111,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -10975,6 +11170,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135178936}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1135178941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135178936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 1
 --- !u!1001 &1139610948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15423,6 +15633,7 @@ GameObject:
   - component: {fileID: 1453160740}
   - component: {fileID: 1453160739}
   - component: {fileID: 1453160738}
+  - component: {fileID: 1453160741}
   m_Layer: 0
   m_Name: BorderBot3_5
   m_TagString: Untagged
@@ -15460,7 +15671,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -15519,6 +15730,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453160736}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1453160741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453160736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 0
 --- !u!1001 &1463970736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20026,6 +20252,7 @@ GameObject:
   - component: {fileID: 1826338930}
   - component: {fileID: 1826338929}
   - component: {fileID: 1826338928}
+  - component: {fileID: 1826338931}
   m_Layer: 0
   m_Name: BorderBot2_5
   m_TagString: Untagged
@@ -20063,7 +20290,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -20122,6 +20349,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826338926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1826338931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826338926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f441701a7ec394f4b813edbee29e41dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDuration: 0.3
+  pushDistance: 10
+  horizontal: 0
 --- !u!1001 &1834567692
 PrefabInstance:
   m_ObjectHideFlags: 0
