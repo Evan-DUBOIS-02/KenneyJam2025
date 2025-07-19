@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum WorldType
 {
@@ -21,5 +22,10 @@ public class GameManager: MonoBehaviour
     private void Awake()
     {
         _instance = this;
+    }
+
+    public void EndGame(string _nameScene)
+    {
+        SceneManager.LoadScene(_nameScene);
     }
 }

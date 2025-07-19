@@ -8,6 +8,7 @@ public class TowerManager: MonoBehaviour
     public WorldType _worldType;
     public Image _mask;
     public GameObject _interactUI;
+    public string _nameScene;
 
     private void Update()
     {
@@ -23,6 +24,9 @@ public class TowerManager: MonoBehaviour
             energieNumber = -energieNumber;
         
         _mask.fillAmount += (energieNumber*GameManager.Instance.PERCENT_RATIO);
+        Debug.Log("Fill amount : " + _mask.fillAmount);
+        if(_mask.fillAmount >= 0.9 || _mask.fillAmount <= 0.1)
+            GameManager.Instance.EndGame(_nameScene);
         BorderGenerator.Instance.UpdateBorders();
     }
 
@@ -33,7 +37,6 @@ public class TowerManager: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("cc");
         if (other.CompareTag("Player"))
         {
             DisplayInteract(true);
