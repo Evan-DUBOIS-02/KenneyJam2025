@@ -8,6 +8,8 @@ public class PlayerAction : MonoBehaviour
     public int collectibles = 0;
     public int playerID;
     SpawnElectricBall spawnElectricBall;
+
+    public bool hasTowerUpgrade = false;
     
     private Animator _animator;
     private TowerManager _currentTower;
@@ -58,6 +60,11 @@ public class PlayerAction : MonoBehaviour
         else if (other.CompareTag("Tower"))
         {
             _currentTower = other.GetComponent<TowerManager>();
+        }
+
+        else if (other.CompareTag("UpgradeTower"))
+        {
+            Destroy(other.gameObject);
         }
     }
 
