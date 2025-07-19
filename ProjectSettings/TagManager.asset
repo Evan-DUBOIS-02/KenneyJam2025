@@ -9,6 +9,7 @@ TagManager:
   - Player1
   - Player2
   - BallManager
+  - Border
   layers:
   - Default
   - TransparentFX

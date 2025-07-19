@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,13 +8,23 @@ public class TowerManager: MonoBehaviour
     public Image _mask;
     public GameObject _interactUI;
     public string _nameScene;
+    
+    public GameObject _minionPrefab;
+    private float minionCooldown = 0f;
+    private float minionStartCooldown = 0.5f;
+    private int numberOfMinionsToLunch = 0;
+
+    private void Start()
+    {
+        minionCooldown = minionStartCooldown;
+    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _worldType == WorldType.Futurist)
-        {
-            IncreaseTerrain(1);
-        }
+        if(minionCooldown > 0)
+            minionCooldown -= Time.deltaTime;
+        else if (numberOfMinionsToLunch > 0)
+            LunchMinion();
     }
 
     public void IncreaseTerrain(int energieNumber)
@@ -24,10 +33,29 @@ public class TowerManager: MonoBehaviour
             energieNumber = -energieNumber;
         
         _mask.fillAmount += (energieNumber*GameManager.Instance.PERCENT_RATIO);
-        Debug.Log("Fill amount : " + _mask.fillAmount);
         if(_mask.fillAmount >= 0.9 || _mask.fillAmount <= 0.1)
             GameManager.Instance.EndGame(_nameScene);
         BorderGenerator.Instance.UpdateBorders();
+    }
+
+    public void IncreaseMinionToLunch()
+    {
+        numberOfMinionsToLunch++;
+    }
+
+    private void LunchMinion()
+    {
+        GameObject minion = null;
+        if(_worldType ==  WorldType.Futurist)
+            minion = Instantiate(_minionPrefab, transform.position, Quaternion.Euler(0, -90, 0));
+        else
+            minion = Instantiate(_minionPrefab, transform.position, Quaternion.Euler(0, 90, 0));
+        
+        minion.transform.SetParent(transform);
+        minion.layer = gameObject.layer;
+        minion.GetComponent<TowerMinion>().RegisterTower(this);
+        minionCooldown = minionStartCooldown;
+        numberOfMinionsToLunch--;
     }
 
     private void DisplayInteract(bool show)
