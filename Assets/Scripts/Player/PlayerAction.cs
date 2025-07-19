@@ -5,6 +5,13 @@ public class PlayerAction : MonoBehaviour
 
     public KeyCode dropKey = KeyCode.E;
     public int collectibles = 0;
+    public int playerID;
+    SpawnElectricBall spawnElectricBall;
+
+    private void Start()
+    {
+        spawnElectricBall = GameObject.FindWithTag("BallManager").GetComponent<SpawnElectricBall>();
+    }
 
     public int maxCollectibles = 3;
 
@@ -13,6 +20,7 @@ public class PlayerAction : MonoBehaviour
         if (other.CompareTag("Collectibles") && collectibles < maxCollectibles )
         {
             Destroy(other.gameObject);
+            spawnElectricBall.DecrementCurrentElectricBall(playerID);
             collectibles++;
         }
     }
