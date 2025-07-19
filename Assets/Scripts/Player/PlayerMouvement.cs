@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMouvement : MonoBehaviour
@@ -7,6 +8,13 @@ public class PlayerMouvement : MonoBehaviour
     public KeyCode rightKey = KeyCode.D;
     public KeyCode upKey = KeyCode.Z;
     public KeyCode downKey = KeyCode.S;
+    
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
 
     void Update()
     {
@@ -26,6 +34,8 @@ public class PlayerMouvement : MonoBehaviour
 
        
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
+        transform.GetChild(0).LookAt(transform.position + direction, Vector3.up);
+        _animator.SetFloat("Speed", direction.magnitude);
     }
 }
 

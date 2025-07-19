@@ -70,46 +70,51 @@ public class SpawnElectricBall : MonoBehaviour
 
     public float GenerateX(int id, float zValue)
     {
-        float generateX = Random.Range(xMin, xMax);
+        float generateX = 0.0f;
         if(id == 1)
         {
             switch (zValue)
             {
                 case float z when (z < zMax && z > borderBot[0].transform.position.z):
-                    while (generateX > borderTop[0].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(xMin, borderTop[0].transform.position.x);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(xMin, borderTop[0].transform.position.x);
                     }
                     break;
 
                 case float z when (z < borderBot[0].transform.position.z && z > borderBot[1].transform.position.z):
-                    while (generateX > borderTop[1].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(xMin, borderTop[1].transform.position.x);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(xMin, borderTop[1].transform.position.x);
                     }
                     break;
 
                 case float z when (z < borderBot[1].transform.position.z && z > borderBot[2].transform.position.z):
-                    while (generateX > borderTop[2].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(xMin, borderTop[2].transform.position.x);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(xMin, borderTop[2].transform.position.x);
                     }
                     break;
 
                 case float z when (z < borderBot[2].transform.position.z && z > borderBot[3].transform.position.z):
-                    while (generateX > borderTop[3].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(xMin, borderTop[3].transform.position.x);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(xMin, borderTop[3].transform.position.x);
                     }
                     break;
 
                 case float z when (z < borderBot[3].transform.position.z && z > zMin):
-                    while (generateX > borderTop[4].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(xMin, borderTop[4].transform.position.x);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(xMin, borderTop[4].transform.position.x);
                     }
                     break;
-
+                
                 default:
                     break;
             }
@@ -120,37 +125,42 @@ public class SpawnElectricBall : MonoBehaviour
             switch (zValue)
             {
                 case float z when (z < zMax && z > borderBot[0].transform.position.z):
-                    while (generateX < borderTop[0].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(borderTop[0].transform.position.x, xMax);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(borderTop[0].transform.position.x, xMax);
                     }
                     break;
 
                 case float z when (z < borderBot[0].transform.position.z && z > borderBot[1].transform.position.z):
-                    while (generateX < borderTop[1].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(borderTop[1].transform.position.x, xMax);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(borderTop[1].transform.position.x, xMax);
                     }
                     break;
 
                 case float z when (z < borderBot[1].transform.position.z && z > borderBot[2].transform.position.z):
-                    while (generateX < borderTop[2].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(borderTop[2].transform.position.x, xMax);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(borderTop[2].transform.position.x, xMax);
                     }
                     break;
 
                 case float z when (z < borderBot[2].transform.position.z && z > borderBot[3].transform.position.z):
-                    while (generateX < borderTop[3].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(borderTop[3].transform.position.x, xMax);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(borderTop[3].transform.position.x, xMax);
                     }
                     break;
 
                 case float z when (z < borderBot[3].transform.position.z && z > zMin):
-                    while (generateX < borderTop[4].transform.position.x && Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
+                    generateX = Random.Range(borderTop[4].transform.position.x, xMax);
+                    while (Physics.CheckSphere(new Vector3(generateX, yAxis, zValue), scaleBallCollider))
                     {
-                        generateX = Random.Range(xMin, xMax);
+                        generateX = Random.Range(borderTop[4].transform.position.x, xMax);
                     }
                     break;
 
@@ -159,10 +169,12 @@ public class SpawnElectricBall : MonoBehaviour
             }
         }
 
-            return generateX;
+        return generateX;
     }
+    
     public void DecrementCurrentElectricBall(int playerID)
     {
+        Debug.Log("Decrement for player "  + playerID);
         if (playerID == 1)
             currentNumberOfElectricBall1 -= 1;
         else if (playerID == 2)
