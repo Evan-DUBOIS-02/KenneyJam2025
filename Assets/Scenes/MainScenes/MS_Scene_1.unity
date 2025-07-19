@@ -6768,6 +6768,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6567233961693915754, guid: 4e47f4c1505740946a630cc221cdd5ae, type: 3}
   m_PrefabInstance: {fileID: 637890793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &639720616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414217489220016096, guid: 742cfaf37c1b1f64c93692a4c6a08d1e, type: 3}
+  m_PrefabInstance: {fileID: 582675723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &644338598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9869,6 +9874,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &979724329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4414217489220016096, guid: 26444b772d0b3da488dda40e1c3e0a66, type: 3}
+  m_PrefabInstance: {fileID: 1481781785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &981377598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12710,6 +12720,8 @@ MonoBehaviour:
   - {fileID: 1152720833}
   - {fileID: 344722736}
   - {fileID: 1771390997}
+  _player1: {fileID: 639720616}
+  _player2: {fileID: 979724329}
 --- !u!4 &1193758163
 Transform:
   m_ObjectHideFlags: 0
