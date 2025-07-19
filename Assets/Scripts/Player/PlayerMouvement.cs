@@ -8,12 +8,10 @@ public class PlayerMouvement : MonoBehaviour
     public KeyCode upKey = KeyCode.Z;
     public KeyCode downKey = KeyCode.S;
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 direction = Vector3.zero;
 
-    
         if (Input.GetKey(leftKey) )
             direction += Vector3.left;
 
@@ -27,8 +25,6 @@ public class PlayerMouvement : MonoBehaviour
             direction += Vector3.back;
 
        
-        
-        
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
     }
 }

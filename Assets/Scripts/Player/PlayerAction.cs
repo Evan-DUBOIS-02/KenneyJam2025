@@ -2,30 +2,33 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
-    public KeyCode takeKey = KeyCode.A;
+
     public KeyCode dropKey = KeyCode.E;
+    public int collectibles = 0;
 
-
-    void Start()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Collectibles"))
+        {
+            Destroy(other.gameObject);
+            collectibles++;
+        }
+
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(takeKey))
+    void OnTriggerStay(Collider other)
+    { 
+        if (other.CompareTag("Tower"))
         {
-            
-            Debug.Log("Take");
+
+            if (Input.GetKeyDown(dropKey) && collectibles > 0)
+            {
+                collectibles--;
+
+            }
         }
 
-        if (Input.GetKeyDown(dropKey))
-        {
-            
-            Debug.Log("Drop");
-        }
     }
 
 
