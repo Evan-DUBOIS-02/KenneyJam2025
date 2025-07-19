@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Collectibles
   - Tower
+  - Player1
+  - Player2
+  - BallManager
   layers:
   - Default
   - TransparentFX
