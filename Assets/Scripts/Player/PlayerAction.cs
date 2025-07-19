@@ -35,7 +35,7 @@ public class PlayerAction : MonoBehaviour
         {
             collectibles--;
             UpdateUI();
-            _currentTower.IncreaseTerrain(1);
+            _currentTower.IncreaseMinionToLunch();
             _animator.SetTrigger("Interact");
             audioSourceTower.PlayOneShot(soundTower);
         }
