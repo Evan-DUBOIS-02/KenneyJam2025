@@ -12,10 +12,11 @@ public class TowerMinion: MonoBehaviour
                 transform.Translate(Vector3.forward*Time.deltaTime*_moveSpeed);
         }
 
-        private void OnCollisionEnter(Collision other)
+        private void OnTriggerEnter(Collider other)
         {
                 if (other.gameObject.CompareTag("Border"))
                 {
+                        Debug.Log("here");
                         _tower.IncreaseTerrain(1);
                         Destroy(gameObject);
                 }
