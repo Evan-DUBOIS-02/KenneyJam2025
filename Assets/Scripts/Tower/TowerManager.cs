@@ -58,7 +58,7 @@ public class TowerManager: MonoBehaviour
         numberOfMinionsToLunch--;
     }
 
-    private void DisplayInteract(bool show)
+    public void DisplayInteract(bool show)
     {
         _interactUI.SetActive(show);
     }
@@ -67,7 +67,8 @@ public class TowerManager: MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            DisplayInteract(true);
+            if(other.GetComponentInChildren<PlayerAction>().collectibles > 0)
+                DisplayInteract(true);
         }
     }
 
