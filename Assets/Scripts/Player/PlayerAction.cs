@@ -38,6 +38,8 @@ public class PlayerAction : MonoBehaviour
             _currentTower.IncreaseMinionToLunch();
             _animator.SetTrigger("Interact");
             audioSourceTower.PlayOneShot(soundTower);
+            if(collectibles <= 0)
+                _currentTower.DisplayInteract(false);
         }
     }
 
