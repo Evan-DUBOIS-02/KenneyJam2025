@@ -23,7 +23,8 @@ public class PlayerAction : MonoBehaviour
             if (Input.GetKeyDown(dropKey) && collectibles > 0)
             {
                 collectibles--;
-                  
+                other.GetComponent<TowerManager>().IncreaseTerrain(1);
+                                 
             }
         }
 
