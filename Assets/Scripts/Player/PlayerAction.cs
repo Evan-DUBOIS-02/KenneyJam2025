@@ -13,8 +13,6 @@ public class PlayerAction : MonoBehaviour
             Destroy(other.gameObject);
             collectibles++;
         }
-
-
     }
 
     void OnTriggerStay(Collider other)
@@ -25,7 +23,7 @@ public class PlayerAction : MonoBehaviour
             if (Input.GetKeyDown(dropKey) && collectibles > 0)
             {
                 collectibles--;
-
+                  
             }
         }
 
