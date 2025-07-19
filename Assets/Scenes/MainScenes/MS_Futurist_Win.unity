@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f39036110584436a8bf8d0a32503dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playSceneName: PS_Gugu_1
+  _playSceneName: MS_Scene_1
   _playSceneMainMenu: MS_Menu
   _playSceneCredit: MS_Credit
 --- !u!4 &194958766
