@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAction : MonoBehaviour
 {
@@ -7,10 +8,29 @@ public class PlayerAction : MonoBehaviour
     public int collectibles = 0;
     public int playerID;
     SpawnElectricBall spawnElectricBall;
+    
+    private Animator _animator;
+    private TowerManager _currentTower;
+    
+    public Sprite _emptySprite;
+    public Sprite _fullSprite;
+    public Image[] _powerUI;
 
     private void Start()
     {
         spawnElectricBall = GameObject.FindWithTag("BallManager").GetComponent<SpawnElectricBall>();
+        _animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(dropKey) && collectibles > 0 && _currentTower != null)
+        {
+            collectibles--;
+            UpdateUI();
+            _currentTower.IncreaseTerrain(1);
+            _animator.SetTrigger("Interact");
+        }
     }
 
     public int maxCollectibles = 3;
@@ -22,23 +42,32 @@ public class PlayerAction : MonoBehaviour
             Destroy(other.gameObject);
             spawnElectricBall.DecrementCurrentElectricBall(playerID);
             collectibles++;
+            UpdateUI();
+        }
+        else if (other.CompareTag("Tower"))
+        {
+            _currentTower = other.GetComponent<TowerManager>();
         }
     }
 
-    void OnTriggerStay(Collider other)
-    { 
+    private void OnTriggerExit(Collider other)
+    {
         if (other.CompareTag("Tower"))
         {
-
-            if (Input.GetKeyDown(dropKey) && collectibles > 0)
-            {
-                collectibles--;
-                other.GetComponent<TowerManager>().IncreaseTerrain(1);
-                                 
-            }
+            _currentTower = null;
         }
-
     }
 
+    private void UpdateUI()
+    {
+        for (int i = 0; i < collectibles; i++)
+        {
+            _powerUI[i].sprite = _fullSprite;
+        }
 
+        for (int i = collectibles; i < maxCollectibles; i++)
+        {
+            _powerUI[i].sprite = _emptySprite;
+        }
+    }
 }
