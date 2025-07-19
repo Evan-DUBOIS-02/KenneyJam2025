@@ -1,23 +1,26 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BorderGenerator : MonoBehaviour
 {
+    private static BorderGenerator _instance;
+    public static BorderGenerator Instance
+    {
+        get { return _instance; }
+    }
+    
     public List<GameObject> _bordersTop;
     public List<GameObject> _bordersBot;
     public List<Image> _images;
-    void Start()
+
+    private void Awake()
     {
-        
-    }
-    
-    void Update()
-    {
-        UpdateBorders();
+        _instance = this;
     }
 
-    void UpdateBorders()
+    public void UpdateBorders()
     {
         for (int i = 0; i < _images.Count; i++)
         {
