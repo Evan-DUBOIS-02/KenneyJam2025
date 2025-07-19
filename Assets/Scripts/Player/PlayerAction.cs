@@ -6,9 +6,11 @@ public class PlayerAction : MonoBehaviour
     public KeyCode dropKey = KeyCode.E;
     public int collectibles = 0;
 
+    public int maxCollectibles = 3;
+
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectibles"))
+        if (other.CompareTag("Collectibles") && collectibles < maxCollectibles )
         {
             Destroy(other.gameObject);
             collectibles++;
