@@ -8,12 +8,8 @@ public class SpawnUpgrades : MonoBehaviour
     public float yAxis;
     public float scaleUTBoxCollider;
 
-    [Header("UI Management")]
-    public float timer = 5f;
-
     [Header("Equilibrage")]
     public float timeBetweenSpawnUpgradeTowers;
-    public float timerUntilUTSpawn;
     public float spawnTimeUpgradeTowers;
 
     [Header("Prop-Ecran")]
@@ -34,12 +30,11 @@ public class SpawnUpgrades : MonoBehaviour
         {
             float generateZ1 = Random.Range(zMin, zMax);
             float generateX1 = GenerateX(1, generateZ1);
-            GameObject UTPrefab = Instantiate(upgradeTowersPrefab, new Vector3(generateX1, yAxis, generateZ1), Quaternion.identity);
-            Debug.Log("Instantiate");
-            CountdownAndSpawnUT(UTPrefab);
+            Instantiate(upgradeTowersPrefab, new Vector3(generateX1, yAxis, generateZ1), Quaternion.identity);
             timeBetweenSpawnUpgradeTowers = spawnTimeUpgradeTowers;
         }
         timeBetweenSpawnUpgradeTowers -= Time.deltaTime;
+
     }
 
     public float GenerateX(int id, float zValue)
@@ -53,18 +48,5 @@ public class SpawnUpgrades : MonoBehaviour
         }
 
         return generateX;
-    }
-
-    public void CountdownAndSpawnUT(GameObject UTPrefab)
-    {
-        Debug.Log("Get in fct");
-        string textTimerUT = UTPrefab.GetComponent<TextMeshProUGUI>().text;
-        while (timerUntilUTSpawn < 0)
-        {
-            timerUntilUTSpawn -= Time.deltaTime;
-            textTimerUT = Mathf.Round(timer).ToString();
-            Debug.Log("While");
-        }
-        UTPrefab.GetComponent<Collider>().enabled = true;
     }
 }
