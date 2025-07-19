@@ -16,10 +16,17 @@ public class PlayerAction : MonoBehaviour
     public Sprite _fullSprite;
     public Image[] _powerUI;
 
+
+    public AudioSource audioSourceBall;
+    public AudioClip soundBall;
+
+    public AudioSource audioSourceTower;
+    public AudioClip soundTower;
+
     private void Start()
     {
         spawnElectricBall = GameObject.FindWithTag("BallManager").GetComponent<SpawnElectricBall>();
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -30,6 +37,7 @@ public class PlayerAction : MonoBehaviour
             UpdateUI();
             _currentTower.IncreaseTerrain(1);
             _animator.SetTrigger("Interact");
+            audioSourceTower.PlayOneShot(soundTower);
         }
     }
 
@@ -37,12 +45,13 @@ public class PlayerAction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectibles") && collectibles < maxCollectibles )
+        if (other.CompareTag("Collectibles") && collectibles < maxCollectibles)
         {
             Destroy(other.gameObject);
             spawnElectricBall.DecrementCurrentElectricBall(playerID);
             collectibles++;
             UpdateUI();
+            audioSourceBall.PlayOneShot(soundBall);
         }
         else if (other.CompareTag("Tower"))
         {
