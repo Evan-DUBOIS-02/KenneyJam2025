@@ -778,13 +778,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 1655085411}
   - {fileID: 1982597570}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1792408045}
   audioSourceBreakWall: {fileID: 31282339}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 31282340}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 31282341}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &31282336
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7257,8 +7258,8 @@ MonoBehaviour:
   - {fileID: 1447068659}
   - {fileID: 1669497023}
   - {fileID: 1547612632}
-  audioSourceReady: {fileID: 419477906}
-  soundReady: {fileID: 8300000, guid: 7212b441bd28ebc488e199ea2437d24b, type: 3}
+  audioSourceReady: {fileID: 0}
+  soundReady: {fileID: 0}
 --- !u!82 &419477905
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7472,7 +7473,7 @@ MonoBehaviour:
   yAxis: 2.5
   scaleUTBoxCollider: 2
   timeBetweenSpawnUpgradeTowers: 0
-  spawnTimeUpgradeTowers: 10
+  spawnTimeUpgradeTowers: 35
   xMin: -35
   xMax: 35
   zMin: -40
@@ -11582,13 +11583,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 1945684222}
   - {fileID: 434550297}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1940539058}
   audioSourceBreakWall: {fileID: 662698999}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 662699000}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 662699001}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &662698996
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13694,13 +13696,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 887880031}
   - {fileID: 546619325}
+  UI: {fileID: 0}
   _imgFill: {fileID: 726345954}
   audioSourceBreakWall: {fileID: 769734270}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 769734271}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 769734272}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &769734267
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23336,13 +23339,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 331122923}
   - {fileID: 1986819824}
+  UI: {fileID: 0}
   _imgFill: {fileID: 881807090}
   audioSourceBreakWall: {fileID: 1284814575}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 1284814576}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 1284814577}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &1284814572
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24216,13 +24220,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 672880146}
   - {fileID: 1960707699}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1777561295}
   audioSourceBreakWall: {fileID: 1328864480}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 1328864481}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 1328864482}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &1328864477
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26355,13 +26360,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 1128923554}
   - {fileID: 1859253661}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1125142051}
   audioSourceBreakWall: {fileID: 1447068665}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 1447068666}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 1447068667}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &1447068662
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28969,13 +28975,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 1248144817}
   - {fileID: 1743956857}
+  UI: {fileID: 0}
   _imgFill: {fileID: 236858220}
   audioSourceBreakWall: {fileID: 1547612638}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 1547612639}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 1547612640}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &1547612635
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31545,13 +31552,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 9931915}
   - {fileID: 1516620521}
+  UI: {fileID: 0}
   _imgFill: {fileID: 2034180462}
   audioSourceBreakWall: {fileID: 1669497029}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 1669497030}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 1669497031}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &1669497026
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -39064,13 +39072,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 472947817}
   - {fileID: 1985681754}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1944905910}
   audioSourceBreakWall: {fileID: 2022921369}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 2022921370}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 2022921371}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &2022921366
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -41079,13 +41088,14 @@ MonoBehaviour:
   _levelPrefab:
   - {fileID: 696372637}
   - {fileID: 1271965839}
+  UI: {fileID: 0}
   _imgFill: {fileID: 1765065679}
   audioSourceBreakWall: {fileID: 2118294310}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
-  audioSourceUpgrade: {fileID: 2118294311}
-  soundUpgrade: {fileID: 8300000, guid: 7d2fa6d2a00d9de48866ff65bda10080, type: 3}
-  audioSourceDowngrade: {fileID: 2118294312}
-  soundDowngrade: {fileID: 8300000, guid: c4fbb66e937e02d4dbf41e521d2e5dcc, type: 3}
+  audioSourceUpgrade: {fileID: 0}
+  soundUpgrade: {fileID: 0}
+  audioSourceDowngrade: {fileID: 0}
+  soundDowngrade: {fileID: 0}
 --- !u!135 &2118294307
 SphereCollider:
   m_ObjectHideFlags: 0
