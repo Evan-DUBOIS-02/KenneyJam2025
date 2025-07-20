@@ -13,6 +13,15 @@ public class TowerManager: MonoBehaviour
     private float minionCooldown = 0f;
     private float minionStartCooldown = 0.5f;
     private int numberOfMinionsToLunch = 0;
+    
+    // xp
+    [Header("XP")]
+    public int _numberOfOrbToLevelUp = 3;
+    public float[] _levelMult;
+    public GameObject[] _levelPrefab;
+    private int _currentLevel = 0;
+    private int _numberOfOrb = 0;
+    public Image _imgFill;
 
     public AudioSource audioSourceBreakWall;
     public AudioClip soundBreakWall;
@@ -36,15 +45,33 @@ public class TowerManager: MonoBehaviour
         if (_worldType == WorldType.Futurist)
             energieNumber = -energieNumber;
         
-        _mask.fillAmount += (energieNumber*GameManager.Instance.PERCENT_RATIO);
+        _mask.fillAmount += energieNumber*(GameManager.Instance.PERCENT_RATIO * _levelMult[_currentLevel]);
         if(_mask.fillAmount >= 0.9 || _mask.fillAmount <= 0.1)
             GameManager.Instance.EndGame(_nameScene);
+        
         BorderGenerator.Instance.UpdateBorders();
     }
 
     public void IncreaseMinionToLunch()
     {
         numberOfMinionsToLunch++;
+        
+        _numberOfOrb++;
+        _imgFill.fillAmount = _numberOfOrb/(float)_numberOfOrbToLevelUp;
+        Debug.Log(_numberOfOrb/_numberOfOrbToLevelUp);
+        Debug.Log(_imgFill.fillAmount);
+        if (_numberOfOrb == _numberOfOrbToLevelUp && _currentLevel < _levelPrefab.Length)
+        {
+            _numberOfOrb = 0;
+            _imgFill.fillAmount = 0f;
+            if(_currentLevel == 0)
+                GetComponent<MeshRenderer>().enabled = false;
+            else
+                _levelPrefab[_currentLevel-1].SetActive(false);
+            
+            _levelPrefab[_currentLevel].SetActive(true);
+            _currentLevel++;
+        }
     }
 
     private void LunchMinion()
