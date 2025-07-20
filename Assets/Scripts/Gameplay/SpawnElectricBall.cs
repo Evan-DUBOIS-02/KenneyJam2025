@@ -39,6 +39,9 @@ public class SpawnElectricBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!GameManager.Instance._gameStarted)
+            return;
+        
         //JOUEUR 1 (LEFT)
         if(currentNumberOfElectricBall1 < maxNumberOfElectricBall)
         {
