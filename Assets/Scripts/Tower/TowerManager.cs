@@ -27,6 +27,7 @@ public class TowerManager: MonoBehaviour
     public int _numberOfOrbToLevelUp = 3;
     public float[] _levelMult;
     public GameObject[] _levelPrefab;
+    public GameObject UI;
     [NonSerialized]
     public int _currentLevel = 0;
     private int _numberOfOrb = 0;
