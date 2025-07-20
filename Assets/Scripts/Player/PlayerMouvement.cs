@@ -35,8 +35,11 @@ public class PlayerMouvement : MonoBehaviour
 
         if (Input.GetKey(downKey))
             direction += Vector3.back;
-
-       
+        
+        Vector3 newPosition = transform.position + direction * speed * Time.deltaTime;
+        if(newPosition.x < -75 || newPosition.z > 50 || newPosition.x > 75 || newPosition.z < -50)
+            return;
+        
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
         transform.GetChild(0).LookAt(transform.position + direction, Vector3.up);
         _animator.SetFloat("Speed", direction.magnitude);
