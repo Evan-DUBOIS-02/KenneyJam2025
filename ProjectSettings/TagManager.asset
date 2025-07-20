@@ -11,6 +11,8 @@ TagManager:
   - BallManager
   - Border
   - UpgradeTower
+  - BoostSpeed
+  - BoostFreeze
   layers:
   - Default
   - TransparentFX

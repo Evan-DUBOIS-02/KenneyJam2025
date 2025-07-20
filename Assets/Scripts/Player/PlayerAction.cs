@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +9,20 @@ public class PlayerAction : MonoBehaviour
     public KeyCode dropKey = KeyCode.E;
     public int collectibles = 0;
     public int playerID;
+    public float speedBoost;
+    public float baseSpeed;
+    public float speedBoostTime;
+    public float freezeBoostTime;
     SpawnElectricBall spawnElectricBall;
 
     public bool hasTowerUpgrade = false;
     
     private Animator _animator;
     private TowerManager _currentTower;
+    private PlayerMouvement _playerMouvement;
+
+    [SerializeField]
+    private PlayerMouvement _otherPlayerMovement;
     
     public Sprite _emptySprite;
     public Sprite _fullSprite;
@@ -35,6 +44,8 @@ public class PlayerAction : MonoBehaviour
     {
         spawnElectricBall = GameObject.FindWithTag("BallManager").GetComponent<SpawnElectricBall>();
         _animator = GetComponentInChildren<Animator>();
+        _playerMouvement = GetComponent<PlayerMouvement>();
+        baseSpeed = _playerMouvement.speed;
     }
 
     private void Update()
@@ -84,9 +95,16 @@ public class PlayerAction : MonoBehaviour
             _currentTower = other.GetComponent<TowerManager>();
         }
 
-        else if (other.CompareTag("UpgradeTower"))
+        else if (other.CompareTag("BoostSpeed"))
         {
             Destroy(other.gameObject);
+            StartCoroutine(TimeWithMoreSpeed());
+        }
+
+        else if(other.CompareTag("BoostFreeze"))
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(TimeFreezeOtherPlayer());
         }
     }
 
@@ -115,5 +133,19 @@ public class PlayerAction : MonoBehaviour
     {
         ReadyButton.SetActive(ready);
         NotReadyButton.SetActive(!ready);
+    }
+
+    private IEnumerator TimeWithMoreSpeed()
+    {
+        _playerMouvement.speed = speedBoost;
+        yield return new WaitForSeconds(speedBoostTime);
+        _playerMouvement.speed = baseSpeed;
+    }
+
+    private IEnumerator TimeFreezeOtherPlayer()
+    {
+        _otherPlayerMovement.speed = 0;
+        yield return new WaitForSeconds(freezeBoostTime);
+        _otherPlayerMovement.speed = baseSpeed;
     }
 }
