@@ -8,6 +8,7 @@ public class PlayerMouvement : MonoBehaviour
     public KeyCode rightKey = KeyCode.D;
     public KeyCode upKey = KeyCode.Z;
     public KeyCode downKey = KeyCode.S;
+    public bool isStun = false;
     
     private Animator _animator;
 
@@ -19,7 +20,7 @@ public class PlayerMouvement : MonoBehaviour
     void Update()
     {
         // On ne peut pas bouger le temps que la game n'a pas démarré
-        if (!GameManager.Instance._gameStarted)
+        if (!GameManager.Instance._gameStarted || isStun)
             return;
         
         Vector3 direction = Vector3.zero;
