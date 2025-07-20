@@ -26,6 +26,9 @@ public class SpawnUpgrades : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameManager.Instance._gameStarted == false)
+            return;
+        
         if (timeBetweenSpawnUpgradeTowers < 0)
         {
             float generateZ1 = Random.Range(zMin, zMax);
