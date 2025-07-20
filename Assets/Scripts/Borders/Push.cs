@@ -21,8 +21,10 @@ public class Push : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Contact ! ");
             audioSourceBounce.PlayOneShot(soundBounce);
             audioSourceBounce.pitch = URandom.Range(minRangePitch, maxRangePitch);
             Vector3 direction = other.transform.position - transform.position;
