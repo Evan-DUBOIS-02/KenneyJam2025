@@ -662,6 +662,10 @@ MonoBehaviour:
   _interactUI: {fileID: 1160769969}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 31282339}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &31282336
@@ -6590,7 +6594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeBoostPrefabs:
   - {fileID: 3765535294507744288, guid: 87c7e303a5be51c40a38f481404eb29e, type: 3}
-  - {fileID: 3765535294507744288, guid: a5a53efa066fa2a4d876fd9a3a4b3fa3, type: 3}
+  - {fileID: 3765535294507744288, guid: 8d3b11842a186034495719324a1148dd, type: 3}
   yAxis: 2.5
   scaleUTBoxCollider: 2
   timeBetweenSpawnUpgradeTowers: 0
@@ -10184,6 +10188,10 @@ MonoBehaviour:
   _interactUI: {fileID: 969922283}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 662698999}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &662698996
@@ -11734,6 +11742,10 @@ MonoBehaviour:
   _interactUI: {fileID: 786261128}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 769734270}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &769734267
@@ -19489,6 +19501,10 @@ MonoBehaviour:
   _interactUI: {fileID: 1660671127}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 1284814575}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &1284814572
@@ -20136,6 +20152,10 @@ MonoBehaviour:
   _interactUI: {fileID: 229551198}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 1328864480}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &1328864477
@@ -21965,6 +21985,10 @@ MonoBehaviour:
   _interactUI: {fileID: 1391054420}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 1447068665}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &1447068662
@@ -24109,6 +24133,10 @@ MonoBehaviour:
   _interactUI: {fileID: 764774918}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 1547612638}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &1547612635
@@ -26295,6 +26323,10 @@ MonoBehaviour:
   _interactUI: {fileID: 1010274308}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 1669497029}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &1669497026
@@ -31802,6 +31834,10 @@ MonoBehaviour:
   _interactUI: {fileID: 742481546}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 2022921369}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &2022921366
@@ -33357,6 +33393,10 @@ MonoBehaviour:
   _interactUI: {fileID: 1624121782}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _numberOfOrbToLevelUp: 3
+  _levelMult: []
+  _levelPrefab: []
+  _imgFill: {fileID: 0}
   audioSourceBreakWall: {fileID: 2118294310}
   soundBreakWall: {fileID: 8300000, guid: 197015fd094528b46918e91f388fe75a, type: 3}
 --- !u!135 &2118294307
