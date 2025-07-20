@@ -762,6 +762,8 @@ MonoBehaviour:
   _interactUI: {fileID: 1160769969}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -7039,6 +7041,18 @@ MonoBehaviour:
   PERCENT_RATIO: 0.05
   _countDownText: {fileID: 495396661}
   _countDownTextBg: {fileID: 1961508810}
+  _towerPlayer1:
+  - {fileID: 769734264}
+  - {fileID: 1328864474}
+  - {fileID: 2118294304}
+  - {fileID: 662698993}
+  - {fileID: 2022921363}
+  _towerPlayer2:
+  - {fileID: 1284814569}
+  - {fileID: 31282333}
+  - {fileID: 1447068659}
+  - {fileID: 1669497023}
+  - {fileID: 1547612632}
 --- !u!82 &419477905
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7248,6 +7262,7 @@ MonoBehaviour:
   upgradeBoostPrefabs:
   - {fileID: 3765535294507744288, guid: 87c7e303a5be51c40a38f481404eb29e, type: 3}
   - {fileID: 3765535294507744288, guid: 8d3b11842a186034495719324a1148dd, type: 3}
+  - {fileID: 3765535294507744288, guid: c1ea22f4a4c68b240a3659322a82edf3, type: 3}
   yAxis: 2.5
   scaleUTBoxCollider: 2
   timeBetweenSpawnUpgradeTowers: 0
@@ -11345,6 +11360,8 @@ MonoBehaviour:
   _interactUI: {fileID: 969922283}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -13251,6 +13268,8 @@ MonoBehaviour:
   _interactUI: {fileID: 786261128}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -22687,6 +22706,8 @@ MonoBehaviour:
   _interactUI: {fileID: 1660671127}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -23361,6 +23382,8 @@ MonoBehaviour:
   _interactUI: {fileID: 229551198}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -25294,6 +25317,8 @@ MonoBehaviour:
   _interactUI: {fileID: 1391054420}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -27702,6 +27727,8 @@ MonoBehaviour:
   _interactUI: {fileID: 764774918}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -30072,6 +30099,8 @@ MonoBehaviour:
   _interactUI: {fileID: 1010274308}
   _nameScene: MS_Futurist_Win
   _minionPrefab: {fileID: 8730863943618233878, guid: 50ad2419411f0f440ba3beaf8d4c18ee, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -37385,6 +37414,8 @@ MonoBehaviour:
   _interactUI: {fileID: 742481546}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
@@ -39194,6 +39225,8 @@ MonoBehaviour:
   _interactUI: {fileID: 1624121782}
   _nameScene: MS_Medieval_Win
   _minionPrefab: {fileID: 8147475552503080296, guid: 34e750ebacb810743986334082283f92, type: 3}
+  _levelUpVFX: {fileID: 4681828215372489035, guid: 00b828135dc30254eb071ea9975e578d, type: 3}
+  _levelDownVFX: {fileID: 2600110935001628003, guid: 25215c1fa49f8124f8e6873c4b679d6a, type: 3}
   _numberOfOrbToLevelUp: 5
   _levelMult:
   - 0.75
