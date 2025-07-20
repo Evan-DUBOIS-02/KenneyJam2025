@@ -1,6 +1,8 @@
 ﻿using System;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class TowerManager: MonoBehaviour
 {
@@ -60,16 +62,38 @@ public class TowerManager: MonoBehaviour
         _imgFill.fillAmount = _numberOfOrb/(float)_numberOfOrbToLevelUp;
         if (_numberOfOrb == _numberOfOrbToLevelUp && _currentLevel < _levelPrefab.Length)
         {
-            _numberOfOrb = 0;
-            _imgFill.fillAmount = 0f;
-            if(_currentLevel == 0)
-                GetComponent<MeshRenderer>().enabled = false;
-            else
-                _levelPrefab[_currentLevel-1].SetActive(false);
-            
-            _levelPrefab[_currentLevel].SetActive(true);
-            _currentLevel++;
+            UpgradeTower();
         }
+    }
+
+    public void UpgradeTower()
+    {
+        _numberOfOrb = 0;
+        _imgFill.fillAmount = 0f;
+        if(_currentLevel == 0)
+            GetComponent<MeshRenderer>().enabled = false;
+        else
+            _levelPrefab[_currentLevel-1].SetActive(false);
+            
+        _levelPrefab[_currentLevel].SetActive(true);
+        _currentLevel++;
+    }
+
+    public void DowngradeTower()
+    {
+        _numberOfOrb = 0;
+        _imgFill.fillAmount = 0f;
+        
+        if (_currentLevel == 0)
+            return;
+        
+        _levelPrefab[_currentLevel - 1].SetActive(false);
+        
+        _currentLevel--;
+        if(_currentLevel == 0)
+            GetComponent<MeshRenderer>().enabled = true;
+        else
+            _levelPrefab[_currentLevel - 1].SetActive(true);
     }
 
     private void LunchMinion()
