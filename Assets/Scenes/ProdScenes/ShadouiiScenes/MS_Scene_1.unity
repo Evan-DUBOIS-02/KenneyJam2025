@@ -6306,6 +6306,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PERCENT_RATIO: 0.05
+  _countDownText: {fileID: 0}
+  _countDownTextBg: {fileID: 0}
 --- !u!82 &419477905
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6315,7 +6317,7 @@ AudioSource:
   m_GameObject: {fileID: 419477902}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 226458592241421044, guid: 0bf2ee6f2064fea48963f24a6d3e6923, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ea3d3e009e992d340b0eda9b1f690fe2, type: 3}
   m_Resource: {fileID: 8300000, guid: ea3d3e009e992d340b0eda9b1f690fe2, type: 3}
   m_PlayOnAwake: 1
