@@ -54,57 +54,127 @@ public class BorderGenerator : MonoBehaviour
     private void CorrectPlayerPosition()
     {
         // Check for player 1
-        int nearestWallIndex = -1;
-        float nearestWallDistance = Mathf.Infinity;
-        
-        for (int i = 0; i < _bordersTop.Count; i++)
+        float zValue = _player1.transform.position.z;
+        float dir = 0f;
+        switch (zValue)
         {
-            float dir = (_player1.transform.position - _bordersTop[i].transform.position).x;
-            if (dir > 0)
-            {
-                float dist = Vector3.Distance(_player1.transform.position, _bordersTop[i].transform.position);
-                if (dist < nearestWallDistance)
+            case float z when (z < 47 && z > _bordersBot[0].transform.position.z):
+                dir = (_player1.transform.position - _bordersTop[0].transform.position).x;
+                if (dir > 0)
                 {
-                    nearestWallDistance = dist;
-                    nearestWallIndex = i;
+                    _player1.transform.position = new Vector3(
+                        _bordersTop[0].transform.position.x - (_player1.transform.position - _bordersTop[0].transform.position).x,
+                        _player1.transform.position.y,
+                        _player1.transform.position.z
+                    );
                 }
-            }
+                break;
+            case float z when (z < _bordersBot[0].transform.position.z && z > _bordersBot[1].transform.position.z):
+                dir = (_player1.transform.position - _bordersTop[1].transform.position).x;
+                if (dir > 0)
+                {
+                    _player1.transform.position = new Vector3(
+                        _bordersTop[1].transform.position.x - (_player1.transform.position - _bordersTop[1].transform.position).x,
+                        _player1.transform.position.y,
+                        _player1.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[1].transform.position.z && z > _bordersBot[2].transform.position.z):
+                dir = (_player1.transform.position - _bordersTop[2].transform.position).x;
+                if (dir > 0)
+                {
+                    _player1.transform.position = new Vector3(
+                        _bordersTop[2].transform.position.x - (_player1.transform.position - _bordersTop[2].transform.position).x,
+                        _player1.transform.position.y,
+                        _player1.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[2].transform.position.z && z > _bordersBot[3].transform.position.z):
+                dir = (_player1.transform.position - _bordersTop[3].transform.position).x;
+                if (dir > 0)
+                {
+                    _player1.transform.position = new Vector3(
+                        _bordersTop[3].transform.position.x - (_player1.transform.position - _bordersTop[3].transform.position).x,
+                        _player1.transform.position.y,
+                        _player1.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[3].transform.position.z && z > -47):
+                dir = (_player1.transform.position - _bordersTop[4].transform.position).x;
+                if (dir > 0)
+                {
+                    _player1.transform.position = new Vector3(
+                        _bordersTop[4].transform.position.x - (_player1.transform.position - _bordersTop[4].transform.position).x,
+                        _player1.transform.position.y,
+                        _player1.transform.position.z
+                    );
+                }
+                break;
         }
-
-        if (nearestWallIndex != -1)
-        {
-            _player1.transform.position = new Vector3(
-                _bordersTop[nearestWallIndex].transform.position.x - (_player1.transform.position - _bordersTop[nearestWallIndex].transform.position).x,
-                _player1.transform.position.y,
-                _player1.transform.position.z
-            );
-        }
-        
         // Check for player 2
-        nearestWallIndex = -1;
-        nearestWallDistance = Mathf.Infinity;
+        zValue = _player2.transform.position.z;
+        dir = 0f;
         
-        for (int i = 0; i < _bordersTop.Count; i++)
+        switch (zValue)
         {
-            float dir = (_player2.transform.position - _bordersTop[i].transform.position).x;
-            if (dir < 0)
-            {
-                float dist = Vector3.Distance(_player2.transform.position, _bordersTop[i].transform.position);
-                if (dist < nearestWallDistance)
+            case float z when (z < 47 && z > _bordersBot[0].transform.position.z):
+                dir = (_player2.transform.position - _bordersTop[0].transform.position).x;
+                if (dir < 0)
                 {
-                    nearestWallDistance = dist;
-                    nearestWallIndex = i;
+                    _player2.transform.position = new Vector3(
+                        _bordersTop[0].transform.position.x - (_player2.transform.position - _bordersTop[0].transform.position).x,
+                        _player2.transform.position.y,
+                        _player2.transform.position.z
+                    );
                 }
-            }
-        }
-
-        if (nearestWallIndex != -1)
-        {
-            _player2.transform.position = new Vector3(
-                _bordersTop[nearestWallIndex].transform.position.x - (_player2.transform.position - _bordersTop[nearestWallIndex].transform.position).x,
-                _player2.transform.position.y,
-                _player2.transform.position.z
-            );
+                break;
+            case float z when (z < _bordersBot[0].transform.position.z && z > _bordersBot[1].transform.position.z):
+                dir = (_player2.transform.position - _bordersTop[1].transform.position).x;
+                if (dir < 0)
+                {
+                    _player2.transform.position = new Vector3(
+                        _bordersTop[1].transform.position.x - (_player2.transform.position - _bordersTop[1].transform.position).x,
+                        _player2.transform.position.y,
+                        _player2.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[1].transform.position.z && z > _bordersBot[2].transform.position.z):
+                dir = (_player2.transform.position - _bordersTop[2].transform.position).x;
+                if (dir < 0)
+                {
+                    _player2.transform.position = new Vector3(
+                        _bordersTop[2].transform.position.x - (_player2.transform.position - _bordersTop[2].transform.position).x,
+                        _player2.transform.position.y,
+                        _player2.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[2].transform.position.z && z > _bordersBot[3].transform.position.z):
+                dir = (_player2.transform.position - _bordersTop[3].transform.position).x;
+                if (dir < 0)
+                {
+                    _player2.transform.position = new Vector3(
+                        _bordersTop[3].transform.position.x - (_player2.transform.position - _bordersTop[3].transform.position).x,
+                        _player2.transform.position.y,
+                        _player2.transform.position.z
+                    );
+                }
+                break;
+            case float z when (z < _bordersBot[3].transform.position.z && z > -47):
+                dir = (_player2.transform.position - _bordersTop[4].transform.position).x;
+                if (dir < 0)
+                {
+                    _player2.transform.position = new Vector3(
+                        _bordersTop[4].transform.position.x - (_player2.transform.position - _bordersTop[4].transform.position).x,
+                        _player2.transform.position.y,
+                        _player2.transform.position.z
+                    );
+                }
+                break;
         }
     }
 }
