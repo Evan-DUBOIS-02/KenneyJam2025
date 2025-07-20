@@ -44,7 +44,7 @@ public class BorderGenerator : MonoBehaviour
             border.transform.localScale = new Vector3(
                 border.transform.localScale.x,
                 border.transform.localScale.y,
-                _bordersTop[i].transform.position.x - _bordersTop[i+1].transform.position.x
+                _bordersTop[i].transform.position.x - _bordersTop[i+1].transform.position.x + 1.5f
             );
         }
         

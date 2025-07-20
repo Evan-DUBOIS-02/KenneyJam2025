@@ -1217,6 +1217,7 @@ GameObject:
   - component: {fileID: 68154020}
   - component: {fileID: 68154019}
   - component: {fileID: 68154023}
+  - component: {fileID: 68154024}
   m_Layer: 0
   m_Name: BorderTop2_5
   m_TagString: Border
@@ -1253,7 +1254,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 68154018}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1268,7 +1269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1307,8 +1308,8 @@ Transform:
   m_GameObject: {fileID: 68154018}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 21.6}
-  m_LocalScale: {x: 1, y: 10, z: 21.6}
+  m_LocalPosition: {x: 0, y: 3.22, z: 21.6}
+  m_LocalScale: {x: 1.5, y: 1, z: 23.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -1328,6 +1329,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 1
+--- !u!114 &68154024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68154018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &79249980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1751,6 +1771,7 @@ GameObject:
   - component: {fileID: 113029690}
   - component: {fileID: 113029689}
   - component: {fileID: 113029693}
+  - component: {fileID: 113029694}
   m_Layer: 0
   m_Name: BorderTop4_5
   m_TagString: Border
@@ -1787,7 +1808,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113029688}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1802,7 +1823,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1841,8 +1862,8 @@ Transform:
   m_GameObject: {fileID: 113029688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -21.6}
-  m_LocalScale: {x: 1, y: 10, z: 21.6}
+  m_LocalPosition: {x: 0, y: 3.22, z: -21.6}
+  m_LocalScale: {x: 1.5, y: 1, z: 23.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -1862,6 +1883,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 1
+--- !u!114 &113029694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113029688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &114744819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8682,6 +8722,7 @@ GameObject:
   - component: {fileID: 618455127}
   - component: {fileID: 618455126}
   - component: {fileID: 618455129}
+  - component: {fileID: 618455130}
   m_Layer: 0
   m_Name: BorderBot1_5
   m_TagString: Border
@@ -8698,8 +8739,8 @@ Transform:
   m_GameObject: {fileID: 618455124}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 32.4}
-  m_LocalScale: {x: 1.0800004, y: 10, z: 0.001}
+  m_LocalPosition: {x: 0, y: 3.22, z: 32.4}
+  m_LocalScale: {x: 1.5, y: 1, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -8733,7 +8774,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 618455124}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -8748,7 +8789,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8793,6 +8834,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 0
+--- !u!114 &618455130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618455124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &624274763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12026,6 +12086,7 @@ GameObject:
   - component: {fileID: 907922674}
   - component: {fileID: 907922673}
   - component: {fileID: 907922677}
+  - component: {fileID: 907922678}
   m_Layer: 0
   m_Name: BorderTop1_5
   m_TagString: Border
@@ -12062,7 +12123,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907922672}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -12077,7 +12138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12116,8 +12177,8 @@ Transform:
   m_GameObject: {fileID: 907922672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 43.2}
-  m_LocalScale: {x: 1, y: 10, z: 21.6}
+  m_LocalPosition: {x: 0, y: 3.22, z: 43.2}
+  m_LocalScale: {x: 1.5, y: 1, z: 23.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -12137,6 +12198,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 1
+--- !u!114 &907922678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907922672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &912217095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13807,6 +13887,7 @@ GameObject:
   - component: {fileID: 1034656028}
   - component: {fileID: 1034656027}
   - component: {fileID: 1034656031}
+  - component: {fileID: 1034656032}
   m_Layer: 0
   m_Name: BorderTop5_5
   m_TagString: Border
@@ -13843,7 +13924,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034656026}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -13858,7 +13939,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13897,8 +13978,8 @@ Transform:
   m_GameObject: {fileID: 1034656026}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -43.2}
-  m_LocalScale: {x: 1, y: 10, z: 21.6}
+  m_LocalPosition: {x: 0, y: 3.22, z: -43.2}
+  m_LocalScale: {x: 1.5, y: 1, z: 23.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -13918,6 +13999,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 1
+--- !u!114 &1034656032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034656026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1041728587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14407,6 +14507,7 @@ GameObject:
   - component: {fileID: 1096605769}
   - component: {fileID: 1096605768}
   - component: {fileID: 1096605771}
+  - component: {fileID: 1096605772}
   m_Layer: 0
   m_Name: BorderBot4_5
   m_TagString: Border
@@ -14423,8 +14524,8 @@ Transform:
   m_GameObject: {fileID: 1096605766}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -32.3}
-  m_LocalScale: {x: 1.0800004, y: 10, z: 0.001}
+  m_LocalPosition: {x: 0, y: 3.22, z: -32.3}
+  m_LocalScale: {x: 1.5, y: 1, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -14458,7 +14559,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096605766}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -14473,7 +14574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14518,6 +14619,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 0
+--- !u!114 &1096605772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096605766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1118374008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14703,6 +14823,7 @@ GameObject:
   - component: {fileID: 1135178939}
   - component: {fileID: 1135178938}
   - component: {fileID: 1135178941}
+  - component: {fileID: 1135178942}
   m_Layer: 0
   m_Name: BorderTop3_5
   m_TagString: Border
@@ -14719,8 +14840,8 @@ Transform:
   m_GameObject: {fileID: 1135178936}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 21.6}
+  m_LocalPosition: {x: 0, y: 3.22, z: 0}
+  m_LocalScale: {x: 1.5, y: 1, z: 23.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -14754,7 +14875,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135178936}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -14769,7 +14890,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14814,6 +14935,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 1
+--- !u!114 &1135178942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135178936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1139610948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20338,6 +20478,7 @@ GameObject:
   - component: {fileID: 1453160739}
   - component: {fileID: 1453160738}
   - component: {fileID: 1453160741}
+  - component: {fileID: 1453160742}
   m_Layer: 0
   m_Name: BorderBot3_5
   m_TagString: Border
@@ -20354,8 +20495,8 @@ Transform:
   m_GameObject: {fileID: 1453160736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -10.8}
-  m_LocalScale: {x: 1.0800004, y: 10, z: 0.001}
+  m_LocalPosition: {x: 0, y: 3.22, z: -10.8}
+  m_LocalScale: {x: 1.5, y: 1, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -20389,7 +20530,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453160736}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -20404,7 +20545,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20449,6 +20590,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 0
+--- !u!114 &1453160742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453160736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1463970736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26076,6 +26236,7 @@ GameObject:
   - component: {fileID: 1826338929}
   - component: {fileID: 1826338928}
   - component: {fileID: 1826338931}
+  - component: {fileID: 1826338932}
   m_Layer: 0
   m_Name: BorderBot2_5
   m_TagString: Border
@@ -26092,8 +26253,8 @@ Transform:
   m_GameObject: {fileID: 1826338926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 10.8}
-  m_LocalScale: {x: 1.0800004, y: 10, z: 0.001}
+  m_LocalPosition: {x: 0, y: 3.22, z: 10.8}
+  m_LocalScale: {x: 1.5, y: 1, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 714273574}
@@ -26127,7 +26288,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826338926}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -26142,7 +26303,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: db61a370b688cee41805852835bfad81, type: 2}
+  - {fileID: 2100000, guid: 50d1ed9a256ab224095e190cb4c92125, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26187,6 +26348,25 @@ MonoBehaviour:
   pushDuration: 0.3
   pushDistance: 10
   horizontal: 0
+--- !u!114 &1826338932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826338926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cicleSpeed: 0.5
+  outlineMode: 3
+  outlineColor: {r: 3.5169814, g: 3.2625136, b: 0.6569451, a: 1}
+  outlineWidth: 5.8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &1834567692
 PrefabInstance:
   m_ObjectHideFlags: 0
