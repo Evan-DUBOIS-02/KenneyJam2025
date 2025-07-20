@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,13 +18,17 @@ public class PlayerAction : MonoBehaviour
     public Sprite _emptySprite;
     public Sprite _fullSprite;
     public Image[] _powerUI;
-
+    public GameObject NotReadyButton;
+    public GameObject ReadyButton;
 
     public AudioSource audioSourceBall;
     public AudioClip soundBall;
 
     public AudioSource audioSourceTower;
     public AudioClip soundTower;
+    
+    [NonSerialized]
+    public bool _isReady = false;
 
     private void Start()
     {
@@ -33,6 +38,21 @@ public class PlayerAction : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.Instance._isAllPlayerReady && Input.GetKeyDown(dropKey))
+        {
+            _isReady = !_isReady;
+            UpdateReadyUI(_isReady);
+            GameManager.Instance.UpdatePlayerReady(playerID, _isReady);
+        }
+        else if (GameManager.Instance._gameStarted)
+        {
+            for (int i = 0; i < _powerUI.Length; i++)
+            {
+                _powerUI[i].gameObject.SetActive(true);
+                ReadyButton.SetActive(false);
+            }
+        }
+        
         if (Input.GetKeyDown(dropKey) && collectibles > 0 && _currentTower != null)
         {
             collectibles--;
@@ -87,5 +107,11 @@ public class PlayerAction : MonoBehaviour
         {
             _powerUI[i].sprite = _emptySprite;
         }
+    }
+
+    private void UpdateReadyUI(bool ready)
+    {
+        ReadyButton.SetActive(ready);
+        NotReadyButton.SetActive(!ready);
     }
 }

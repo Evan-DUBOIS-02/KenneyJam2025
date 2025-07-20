@@ -18,6 +18,10 @@ public class PlayerMouvement : MonoBehaviour
 
     void Update()
     {
+        // On ne peut pas bouger le temps que la game n'a pas démarré
+        if (!GameManager.Instance._gameStarted)
+            return;
+        
         Vector3 direction = Vector3.zero;
 
         if (Input.GetKey(leftKey) )
