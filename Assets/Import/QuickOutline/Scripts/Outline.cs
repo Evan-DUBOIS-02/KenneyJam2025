@@ -132,10 +132,13 @@ public class Outline : MonoBehaviour {
   }
 
   void Update() {
-    hue += Time.deltaTime * cicleSpeed;
-    if (hue > 1f) hue -= 1f;
-    OutlineColor = Color.HSVToRGB(hue, 1f, 1f);
-    
+    if (cicleSpeed > 0)
+    {
+      hue += Time.deltaTime * cicleSpeed;
+      if (hue > 1f) hue -= 1f;
+      OutlineColor = Color.HSVToRGB(hue, 1f, 1f);
+    }
+
     if (needsUpdate) {
       needsUpdate = false;
 
