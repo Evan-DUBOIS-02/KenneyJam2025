@@ -33,6 +33,9 @@ public class GameManager: MonoBehaviour
     [SerializeField]
     private TowerManager[] _towerPlayer2;
 
+    public AudioSource audioSourceReady;
+    public AudioClip soundReady;
+
     public static GameManager Instance
     {
         get { return _instance; }
@@ -47,10 +50,12 @@ public class GameManager: MonoBehaviour
     {
         if (_isAllPlayerReady)
         {
+            
+            
             if (_countDown > 0)
             {
                 _countDown -= Time.deltaTime;
-                _countDownText.text =  ((int)_countDown).ToString();
+                _countDownText.text = ((int)_countDown).ToString();
                 _countDownTextBg.text = ((int)_countDown).ToString();
             }
             else
@@ -71,6 +76,7 @@ public class GameManager: MonoBehaviour
 
         if (_player1Ready && _player2Ready)
             _isAllPlayerReady = true;
+            audioSourceReady.PlayOneShot(soundReady);
     }
 
     public void EndGame(string _nameScene)

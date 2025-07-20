@@ -35,6 +35,12 @@ public class TowerManager: MonoBehaviour
     public AudioSource audioSourceBreakWall;
     public AudioClip soundBreakWall;
 
+    public AudioSource audioSourceUpgrade;
+    public AudioClip soundUpgrade;
+
+    public AudioSource audioSourceDowngrade;
+    public AudioClip soundDowngrade;
+
     private void Start()
     {
         minionCooldown = minionStartCooldown;
@@ -75,6 +81,7 @@ public class TowerManager: MonoBehaviour
 
     public void UpgradeTower()
     {
+        audioSourceUpgrade.PlayOneShot(soundUpgrade);
         _numberOfOrb = 0;
         _imgFill.fillAmount = 0f;
         if(_currentLevel == 0)
@@ -89,6 +96,7 @@ public class TowerManager: MonoBehaviour
 
     public void DowngradeTower()
     {
+        audioSourceDowngrade.PlayOneShot(soundDowngrade);
         _numberOfOrb = 0;
         _imgFill.fillAmount = 0f;
         
