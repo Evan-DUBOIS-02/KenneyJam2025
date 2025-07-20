@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using URandom = UnityEngine.Random;
 
 public class Push : MonoBehaviour
 {
@@ -10,11 +13,18 @@ public class Push : MonoBehaviour
     
     private Vector3 backwards;
 
+    public AudioSource audioSourceBounce;
+    public AudioClip soundBounce;
+
+    public float minRangePitch = 0.8f;
+    public float maxRangePitch = 1.2f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-
+            audioSourceBounce.PlayOneShot(soundBounce);
+            audioSourceBounce.pitch = URandom.Range(minRangePitch, maxRangePitch);
             Vector3 direction = other.transform.position - transform.position;
 
             if (horizontal)
