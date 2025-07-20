@@ -113,6 +113,12 @@ public class PlayerAction : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(TimeFreezeOtherPlayer());
         }
+
+        else if(other.CompareTag("BoostBomb"))
+        {
+            Destroy(other.gameObject);
+            GameManager.Instance.DowngradeRandomTower(playerID);
+        }
     }
 
     private void OnTriggerExit(Collider other)

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -25,6 +27,11 @@ public class GameManager: MonoBehaviour
     private bool _player1Ready = false;
     private bool _player2Ready = false;
     private float _countDown = 4f;
+
+    [SerializeField]
+    private TowerManager[] _towerPlayer1;
+    [SerializeField]
+    private TowerManager[] _towerPlayer2;
 
     public static GameManager Instance
     {
@@ -69,5 +76,36 @@ public class GameManager: MonoBehaviour
     public void EndGame(string _nameScene)
     {
         SceneManager.LoadScene(_nameScene);
+    }
+
+    public void DowngradeRandomTower(int idAttaquant)
+    {
+        if(idAttaquant == 1)
+        {
+            List<int> _possibleId = new List<int>();
+            for(int i = 0; i < _towerPlayer2.Length; i++)
+            {
+                if( _towerPlayer2[i]._currentLevel != 0)
+                {
+                    _possibleId.Add(i);
+                }
+            }
+            int id = _possibleId[UnityEngine.Random.Range(0, _possibleId.Count)];
+            _towerPlayer2[id].DowngradeTower();
+        }
+
+        else if(idAttaquant == 2)
+        {
+            List<int> _possibleId = new List<int>();
+            for (int i = 0; i < _towerPlayer1.Length; i++)
+            {
+                if (_towerPlayer1[i]._currentLevel != 0)
+                {
+                    _possibleId.Add(i);
+                }
+            }
+            int id = _possibleId[UnityEngine.Random.Range(0, _possibleId.Count)];
+            _towerPlayer1[id].DowngradeTower();
+        }
     }
 }
