@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpawnUpgrades : MonoBehaviour
 {
     [Header("Upgrades")]
-    public GameObject upgradeTowersPrefab;
+    public GameObject[] upgradeBoostPrefabs;
     public float yAxis;
     public float scaleUTBoxCollider;
 
@@ -30,7 +30,8 @@ public class SpawnUpgrades : MonoBehaviour
         {
             float generateZ1 = Random.Range(zMin, zMax);
             float generateX1 = GenerateX(1, generateZ1);
-            Instantiate(upgradeTowersPrefab, new Vector3(generateX1, yAxis, generateZ1), Quaternion.identity);
+            int randomUpgrade = Random.Range(0, upgradeBoostPrefabs.Length);
+            Instantiate(upgradeBoostPrefabs[randomUpgrade], new Vector3(generateX1, yAxis, generateZ1), Quaternion.identity);
             timeBetweenSpawnUpgradeTowers = spawnTimeUpgradeTowers;
         }
         timeBetweenSpawnUpgradeTowers -= Time.deltaTime;
