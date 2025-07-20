@@ -14,6 +14,9 @@ public class TowerManager: MonoBehaviour
     private float minionStartCooldown = 0.5f;
     private int numberOfMinionsToLunch = 0;
 
+    public AudioSource audioSourceBreakWall;
+    public AudioClip soundBreakWall;
+
     private void Start()
     {
         minionCooldown = minionStartCooldown;
@@ -29,7 +32,8 @@ public class TowerManager: MonoBehaviour
 
     public void IncreaseTerrain(int energieNumber)
     {
-        if(_worldType == WorldType.Futurist)
+        audioSourceBreakWall.PlayOneShot(soundBreakWall);
+        if (_worldType == WorldType.Futurist)
             energieNumber = -energieNumber;
         
         _mask.fillAmount += (energieNumber*GameManager.Instance.PERCENT_RATIO);
