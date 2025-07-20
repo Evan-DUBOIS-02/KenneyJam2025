@@ -145,7 +145,9 @@ public class PlayerAction : MonoBehaviour
     private IEnumerator TimeFreezeOtherPlayer()
     {
         _otherPlayerMovement.speed = 0;
+        _otherPlayerMovement.isStun = true;
         yield return new WaitForSeconds(freezeBoostTime);
         _otherPlayerMovement.speed = baseSpeed;
+        _otherPlayerMovement.isStun = false;
     }
 }
