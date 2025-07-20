@@ -16,14 +16,19 @@ public class PlayerAction : MonoBehaviour
     SpawnElectricBall spawnElectricBall;
 
     public bool hasTowerUpgrade = false;
-    
+    public GameObject _otherPlayerSnowman;
+    public GameObject _otherPlayerBaseModel;
+
+
+    [Header("Animation")]    
     private Animator _animator;
     private TowerManager _currentTower;
     private PlayerMouvement _playerMouvement;
 
     [SerializeField]
     private PlayerMouvement _otherPlayerMovement;
-    
+
+    [Header("UI")]
     public Sprite _emptySprite;
     public Sprite _fullSprite;
     public Image[] _powerUI;
@@ -31,6 +36,8 @@ public class PlayerAction : MonoBehaviour
     public GameObject ReadyButton;
     public GameObject TutorialUI;
 
+
+    [Header("Audio")]
     public AudioSource audioSourceBall;
     public AudioClip soundBall;
 
@@ -144,9 +151,13 @@ public class PlayerAction : MonoBehaviour
 
     private IEnumerator TimeFreezeOtherPlayer()
     {
+        _otherPlayerBaseModel.SetActive(false);
+        _otherPlayerSnowman.SetActive(true);
         _otherPlayerMovement.speed = 0;
         _otherPlayerMovement.isStun = true;
         yield return new WaitForSeconds(freezeBoostTime);
+        _otherPlayerBaseModel.SetActive(true);
+        _otherPlayerSnowman.SetActive(false);
         _otherPlayerMovement.speed = baseSpeed;
         _otherPlayerMovement.isStun = false;
     }

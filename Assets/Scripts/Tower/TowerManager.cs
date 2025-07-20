@@ -58,8 +58,6 @@ public class TowerManager: MonoBehaviour
         
         _numberOfOrb++;
         _imgFill.fillAmount = _numberOfOrb/(float)_numberOfOrbToLevelUp;
-        Debug.Log(_numberOfOrb/_numberOfOrbToLevelUp);
-        Debug.Log(_imgFill.fillAmount);
         if (_numberOfOrb == _numberOfOrbToLevelUp && _currentLevel < _levelPrefab.Length)
         {
             _numberOfOrb = 0;

@@ -298,10 +298,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FreezeBoost
       objectReference: {fileID: 0}
-    - target: {fileID: 4687100840132096728, guid: 678326ed4490a4c4e901f0040d9fd75d, type: 3}
-      propertyPath: m_TagString
-      value: BoostFreeze
-      objectReference: {fileID: 0}
     - target: {fileID: 5350344311755139170, guid: 678326ed4490a4c4e901f0040d9fd75d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

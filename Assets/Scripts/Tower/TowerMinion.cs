@@ -16,9 +16,8 @@ public class TowerMinion: MonoBehaviour
         {
                 if (other.gameObject.CompareTag("Border"))
                 {
-                        Debug.Log("here");
-                        _tower.IncreaseTerrain(1);
-                        Destroy(gameObject);
+                    _tower.IncreaseTerrain(1);
+                    Destroy(gameObject);
                 }
         }
 
