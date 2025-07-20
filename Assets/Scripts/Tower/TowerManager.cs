@@ -15,13 +15,20 @@ public class TowerManager: MonoBehaviour
     private float minionCooldown = 0f;
     private float minionStartCooldown = 0.5f;
     private int numberOfMinionsToLunch = 0;
-    
+
+    [SerializeField]
+    private GameObject _levelUpVFX;
+    [SerializeField]
+    private GameObject _levelDownVFX;
+
+
     // xp
     [Header("XP")]
     public int _numberOfOrbToLevelUp = 3;
     public float[] _levelMult;
     public GameObject[] _levelPrefab;
-    private int _currentLevel = 0;
+    [NonSerialized]
+    public int _currentLevel = 0;
     private int _numberOfOrb = 0;
     public Image _imgFill;
 
@@ -77,6 +84,7 @@ public class TowerManager: MonoBehaviour
             
         _levelPrefab[_currentLevel].SetActive(true);
         _currentLevel++;
+        Destroy(Instantiate(_levelUpVFX, transform.position, Quaternion.identity), 3f);
     }
 
     public void DowngradeTower()
@@ -94,6 +102,8 @@ public class TowerManager: MonoBehaviour
             GetComponent<MeshRenderer>().enabled = true;
         else
             _levelPrefab[_currentLevel - 1].SetActive(true);
+
+        Destroy(Instantiate(_levelDownVFX, transform.position, Quaternion.identity), 3f);
     }
 
     private void LunchMinion()

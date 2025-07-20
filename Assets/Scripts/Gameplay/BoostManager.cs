@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class BoostManager : MonoBehaviour
 {
-
     [Header("UI Management")]
     private bool isInteractable = false;
     public float timerUntilUTSpawn;

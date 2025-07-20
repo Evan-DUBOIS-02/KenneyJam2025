@@ -13,6 +13,7 @@ TagManager:
   - UpgradeTower
   - BoostSpeed
   - BoostFreeze
+  - BoostBomb
   layers:
   - Default
   - TransparentFX
