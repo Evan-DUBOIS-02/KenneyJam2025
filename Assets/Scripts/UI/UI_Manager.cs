@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 namespace UI
 {
-    public class UI_Manager:MonoBehaviour
+    public class UI_Manager : MonoBehaviour
     {
         [SerializeField]
         private string _playSceneName;
@@ -14,17 +15,39 @@ namespace UI
 
         public void OnClickPlay()
         {
-            SceneManager.LoadScene(_playSceneName);
+            StartCoroutine(DelayedSceneLoad(1));
         }
 
         public void BackToMainMenu()
         {
-            SceneManager.LoadScene(_playSceneMainMenu);
+            StartCoroutine(DelayedSceneLoad(2));
         }
 
         public void CreditScene()
         {
-            SceneManager.LoadScene(_playSceneCredit);
+            StartCoroutine(DelayedSceneLoad(3));
         }
+
+        private IEnumerator DelayedSceneLoad(int indice)
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            if (indice == 1)
+            {
+                SceneManager.LoadScene(_playSceneName);
+            }
+            else if (indice == 2)
+            {
+                SceneManager.LoadScene(_playSceneMainMenu);
+            }
+            else
+            {
+                SceneManager.LoadScene(_playSceneCredit);
+            }
+        
+            
+        }
+        
+
     }
 }
