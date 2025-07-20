@@ -20,6 +20,7 @@ public class PlayerAction : MonoBehaviour
     public Image[] _powerUI;
     public GameObject NotReadyButton;
     public GameObject ReadyButton;
+    public GameObject TutorialUI;
 
     public AudioSource audioSourceBall;
     public AudioClip soundBall;
@@ -51,6 +52,7 @@ public class PlayerAction : MonoBehaviour
                 _powerUI[i].gameObject.SetActive(true);
                 ReadyButton.SetActive(false);
             }
+            TutorialUI.SetActive(false);
         }
         
         if (Input.GetKeyDown(dropKey) && collectibles > 0 && _currentTower != null)
